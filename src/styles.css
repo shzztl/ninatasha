@@ -1,0 +1,169 @@
+@import "tailwindcss" source("../");
+
+@plugin "tailwindcss-animate";
+
+@theme {
+  --font-sans: 'Poppins', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --color-ink: #26233a;
+  --color-ink-soft: #4d4a62;
+  --color-ink-muted: #6b6880;
+  --color-paper: #f6f5fa;
+
+  --color-lavender-50: #f4f1fd;
+  --color-lavender-100: #e9e3fb;
+  --color-lavender-200: #d6ccf5;
+  --color-lavender-400: #a596de;
+  --color-lavender-600: #6c5bb3;
+  --color-lavender-700: #574893;
+
+  --color-olive-50: #f5f6ec;
+  --color-olive-100: #e8ebd4;
+  --color-olive-200: #d5dbb2;
+  --color-olive-400: #a8b46f;
+  --color-olive-600: #66722f;
+  --color-olive-700: #525c25;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--color-paper);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--color-lavender-200);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-lavender-600);
+  outline-offset: 3px;
+  border-radius: 999px;
+}
+
+/* ---------- Background ---------- */
+.bg-orbs {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  background:
+    radial-gradient(1200px 600px at 50% -10%, #ffffff 0%, transparent 60%),
+    var(--color-paper);
+}
+.bg-orbs span {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(90px);
+  opacity: 0.6;
+}
+
+/* ---------- Glass surfaces ---------- */
+@utility glass {
+  background: linear-gradient(145deg, rgb(255 255 255 / 0.72), rgb(255 255 255 / 0.42));
+  backdrop-filter: blur(22px) saturate(160%);
+  -webkit-backdrop-filter: blur(22px) saturate(160%);
+  border: 1px solid rgb(255 255 255 / 0.75);
+  box-shadow:
+    0 1px 0 0 rgb(255 255 255 / 0.9) inset,
+    0 18px 40px -18px rgb(60 50 110 / 0.18),
+    0 2px 6px -2px rgb(60 50 110 / 0.06);
+}
+
+@utility glass-strong {
+  background: linear-gradient(145deg, rgb(255 255 255 / 0.85), rgb(255 255 255 / 0.6));
+  backdrop-filter: blur(26px) saturate(170%);
+  -webkit-backdrop-filter: blur(26px) saturate(170%);
+  border: 1px solid rgb(255 255 255 / 0.85);
+  box-shadow:
+    0 1px 0 0 rgb(255 255 255 / 0.95) inset,
+    0 12px 32px -14px rgb(60 50 110 / 0.22);
+}
+
+/* Lift + sheen on hover for interactive cards */
+@utility glass-hover {
+  position: relative;
+  transition:
+    transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1),
+    box-shadow 0.35s ease;
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(600px 200px at 20% 0%, rgb(255 255 255 / 0.7), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    pointer-events: none;
+  }
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 1px 0 0 rgb(255 255 255 / 0.95) inset,
+      0 26px 50px -20px rgb(60 50 110 / 0.26);
+  }
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+/* ---------- Reveal on scroll ---------- */
+.js .reveal {
+  opacity: 0;
+}
+.js .reveal.is-visible {
+  opacity: 1;
+  /* backwards fill: once finished, hover transforms apply normally */
+  animation: reveal-in 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) backwards;
+}
+@keyframes reveal-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ---------- Floating pills ---------- */
+@keyframes drift {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+.drift {
+  animation: drift 7s ease-in-out infinite;
+}
+
+/* Placeholder copy marker */
+.placeholder-copy {
+  color: var(--color-ink-muted);
+  font-style: italic;
+}

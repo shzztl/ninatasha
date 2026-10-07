@@ -17,7 +17,7 @@ export const profile = {
   name: 'Nur Izzatul Natasha',
   initials: 'NIN',
   title: 'Computer Science Graduate',
-  focus: ['Data', 'IoT & Embedded Systems', 'Android Development'],
+  focus: ['Android Development', 'Data Analytics', 'IoT & Embedded Systems'],
   positioning: [
     'Computer Science Graduate',
     'Data & Analytics',
@@ -27,21 +27,21 @@ export const profile = {
   ],
   location: 'Sarawak, Malaysia',
   bio: PLACEHOLDER(
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    'With experience in project management, network operations, data analytics, and application development.',
   ) as Copy,
   /** Path in /public, e.g. '/img/natasha.jpg'. null shows the abstract glass placeholder. */
   photo: null as string | null,
   floatingPills: [
     { label: 'Currently exploring', value: 'Android Development' },
-    { label: 'Focus', value: 'Technology • Data • IoT' },
+    { label: 'Focus', value: 'Data Analysis • Technology • IoT' },
     { label: 'Based in', value: 'Sarawak, Malaysia' },
   ],
 }
 
 /** Contact links. Leave null until the real value is known — never guess. */
 export const links = {
-  email: null as string | null, // e.g. 'name@example.com'
-  linkedin: null as string | null, // full URL
+  email: 'izzatulnatasha45@gmail.com', // e.g. 'name@example.com'
+  linkedin: 'www.linkedin.com/in/nur-izzatul-natasha-rathuny-638336189', // full URL
   github: null as string | null, // full URL
 }
 
@@ -71,10 +71,13 @@ export const expertise = [
 export const about = {
   paragraphs: [
     PLACEHOLDER(
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.',
+      'I have a background in Computer Science with a focus on Network Computing, and my interests have expanded across data analytics, IoT, embedded systems and application development.',
     ),
     PLACEHOLDER(
-      'Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper.',
+      'My experience has allowed me to work across both technical and organisational environments — from data analysis and Power BI research to project management, documentation, digitalisation initiatives and Android application development.',
+    ), 
+    PLACEHOLDER(
+      'I enjoy learning by building practical solutions and exploring how technology can improve everyday processes.',
     ),
   ] as Copy[],
   values: [
@@ -107,14 +110,14 @@ export const education: EducationItem[] = [
   {
     school: 'Universiti Malaysia Sarawak (UNIMAS)',
     qualification: 'Bachelor of Computer Science (Network Computing)',
-    dates: null,
-    highlights: ['Network Computing', 'Software Development', 'IoT', 'Technical Project Development'],
+    dates: '2020 - 2024',
+    highlights: ['Network Administration', 'Networking', 'Embedded Systems', 'IoT', 'Microcontollers', 'Programming', 'Technical Documentation'],
   },
   {
     school: 'Labuan Matriculation College',
     qualification: 'Computer Science',
-    dates: null,
-    highlights: [],
+    dates: '2019 - 2020',
+    highlights: ['Physical Science', 'Computer Science', 'Problem Solving', 'Computational Thinking', 'Scientific Fundamentals'],
   },
 ]
 
@@ -132,26 +135,40 @@ export type ExperienceItem = {
 export const experience: ExperienceItem[] = [
   {
     role: 'PROTÉGÉ Project Management',
-    organisation: 'Lawas District Office, Sarawak',
-    dates: '2026 – Present',
-    context: 'Development and Social Unit / project office context.',
-    points: [PLACEHOLDER()],
-    highlight: 'Project Management + Technology + Digitalisation',
+    organisation: 'Lawas District Office / Maltimur Aktif Unggul Joint Venture (MAUJV)',
+    dates: 'April 2026 – Present',
+    context: 'Supporting project administration, IT support, documentation, records management, programme activities and digitalisation initiatives.',
+    points: [PLACEHOLDER('• Village/community records management', 
+            '• Administrative reporting & documentation',
+            '• Programme materials & booklet design',
+            '• Video editing & programme support',
+            '• Digitalisation initiatives')],
+    highlight: 'Project Coordination + Documentation + Digitalisation + Administrative Support',
   },
   {
-    role: 'Data Analyst Executive Trainee',
-    organisation: 'SDEC / Pepper Labs',
-    dates: '2025 – 2026',
-    context: 'Research & Development context.',
-    points: [PLACEHOLDER()],
-    skills: ['Power BI', 'Excel', 'Airtable', 'Data Analysis', 'Data Visualisation', 'Research'],
+    role: 'Data Analyst Executive Trainee (K-Youth)',
+    organisation: 'Sarawak Digital Economy Corporation (SDEC) / Pepper Labs',
+    dates: 'July 2025 – Jan 2026',
+    context: 'Worked as a Data Analyst Executive Trainee within a research and development environment, applying data analytics, '
+    + 'visualisation, data quality management, and technical reporting to support research and decision-making.',
+    points: [PLACEHOLDER('• Developed interactive Power BI research dashboards',
+            '• Performed data modelling & validation',
+            '• Conducted data quality checks across multiple sources',
+            '• Prepared technical reports & data summaries',
+            '• Worked with IR4.0 robotics using Dobot Studio')],
+    skills: ['Power BI', 'Data Analysis', 'Data Modelling', 'Data Validation', 'Data Visualisation', 'Microsoft Excel', 'Airtable', 'Research Data', 'Robotics'],
   },
   {
     role: 'Network Operations Intern',
     organisation: 'Telekom Malaysia',
     dates: null,
-    context: null,
-    points: [],
+    context: 'Gained practical exposure to network operations, operational data analysis, KPI monitoring, technical reporting, and IT system support within a telecommunications environment.',
+    points: [PLACEHOLDER('• Analysed network operational KPIs',
+            '• Developed automated Excel KPI dashboards',
+            '• Processed and structured operational datasets',
+            '• Supported troubleshooting and performance analysis',
+            '• Performed laptop configuration and secure data migration')],
+    skills: ['Network Operations', 'KPI Monitoring', 'Data Analysis', 'Microsoft Excel', 'Dashboard Development', 'IT Support'],
   },
 ]
 

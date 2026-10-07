@@ -207,13 +207,42 @@ export const projects: Project[] = [
     tone: 'lavender',
   },
   {
+    title: 'Lawas Eventia Mobile Application',
+    category: 'Android Application',
+    tech: [
+      'Java',
+      'Android Studio',
+      'XML',
+      'Material Design',
+      'RecyclerView',
+      'ViewPager2',
+      'Google Maps'
+    ],
+    summary:
+      'A mobile application designed to help users discover and explore community events in Lawas, including upcoming events, event categories, locations, and past events.',
+    features: [
+      'Upcoming event discovery',
+      'Event categories',
+      'Event details',
+      'Calendar view',
+      'Past events',
+      'Event gallery',
+      'Location and map integration',
+      'Lawas information',
+      'Swipeable event and image carousels'
+    ],
+    repo: null,
+    showRepo: false,
+    tone: 'olive',
+  },
+  {
     title: 'Smart Parcel Box SMS Alert System',
     category: 'IoT / Embedded Systems',
     tech: ['Arduino Uno', 'SIM900', 'PIR', 'IR', 'LCD I2C', 'Relay', 'Solenoid', 'SMS'],
     summary:
       'IoT smart parcel box that detects parcel activity and provides SMS alerts with owner-controlled unlocking.',
     repo: null,
-    tone: 'olive',
+    tone: 'sky',
   },
   {
     title: 'Smart Irrigation System',

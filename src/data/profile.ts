@@ -27,7 +27,8 @@ export const profile = {
   ],
   location: 'Sarawak, Malaysia',
   bio: PLACEHOLDER(
-    'With experience in project management, network operations, data analytics, and application development.',
+    'My experience spans network computing, IoT, data analytics, project management, and Android development. '
+    + 'I’m always learning, building, and looking for new opportunities to grow. Welcome, and feel free to explore my journey!',
   ) as Copy,
   /** Path in /public, e.g. '/img/natasha.jpg'. null shows the abstract glass placeholder. */
   photo: null as string | null,

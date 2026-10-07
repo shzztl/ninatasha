@@ -236,13 +236,22 @@ export const projects: Project[] = [
     tone: 'olive',
   },
   {
+    title: 'Data Analytics & Power BI Research',
+    category: 'Data Analytics',
+    tech: ['Power BI', 'Excel', 'Airtable'],
+    summary:
+      'Research and visualisation work involving digital research data from six Sarawak universities.',
+    repo: null,
+    tone: 'sky',
+  },
+  {
     title: 'Smart Parcel Box SMS Alert System',
     category: 'IoT / Embedded Systems',
     tech: ['Arduino Uno', 'SIM900', 'PIR', 'IR', 'LCD I2C', 'Relay', 'Solenoid', 'SMS'],
     summary:
       'IoT smart parcel box that detects parcel activity and provides SMS alerts with owner-controlled unlocking.',
     repo: null,
-    tone: 'sky',
+    tone: 'rose',
   },
   {
     title: 'Smart Irrigation System',
@@ -252,16 +261,7 @@ export const projects: Project[] = [
       'Smart irrigation concept using environmental and soil data to support automated watering decisions.',
     repo: null,
     tone: 'sky',
-  },
-  {
-    title: 'Data Analytics & Power BI Research',
-    category: 'Data Analytics',
-    tech: ['Power BI', 'Excel', 'Airtable'],
-    summary:
-      'Research and visualisation work involving digital research data from six Sarawak universities.',
-    repo: null,
-    tone: 'rose',
-  },
+  }
 ]
 
 export const skills = [

@@ -162,7 +162,7 @@ export const experience: ExperienceItem[] = [
   {
     role: 'Network Operations Intern',
     organisation: 'Telekom Malaysia',
-    dates: null,
+    dates: 'Feb - Aug 2023',
     context: 'Gained practical exposure to network operations, operational data analysis, KPI monitoring, technical reporting, and IT system support within a telecommunications environment.',
     points: [PLACEHOLDER('Analysed network operational KPIs', ),
             PLACEHOLDER('Developed automated Excel KPI dashboards', ),

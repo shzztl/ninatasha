@@ -75,7 +75,7 @@ export const about = {
       'I have a background in Computer Science with a focus on Network Computing, and my interests have expanded across data analytics, IoT, embedded systems and application development.',
     ),
     PLACEHOLDER(
-      'My experience has allowed me to work across both technical and organisational environments — from data analysis and Power BI research to project management, documentation, digitalisation initiatives and Android application development.',
+      'My experience has allowed me to work across both technical and organisational environments — from data analysis and Power BI research to project management, documentation, digitalisation [...]'
     ), 
     PLACEHOLDER(
       'I enjoy learning by building practical solutions and exploring how technology can improve everyday processes.',
@@ -160,7 +160,7 @@ export const experience: ExperienceItem[] = [
     skills: ['Power BI', 'Data Analysis', 'Data Modelling', 'Data Validation', 'Data Visualisation', 'Microsoft Excel', 'Airtable', 'Research Data', 'Robotics'],
   },
   {
-    role: 'Network Operations Intern',
+    role: 'Network Operation (Industrial Training)',
     organisation: 'Telekom Malaysia',
     dates: 'Feb - Aug 2023',
     context: 'Gained practical exposure to network operations, operational data analysis, KPI monitoring, technical reporting, and IT system support within a telecommunications environment.',
